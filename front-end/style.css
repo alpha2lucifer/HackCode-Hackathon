@@ -51,7 +51,6 @@ p {
     font-size: 2vw;
 }
 
-
 /********************* Nav-Bar *********************/
 .header {
     position: relative;
@@ -245,27 +244,32 @@ p {
     opacity: 1;
 }
 
-.services-heading-1{
+.services-heading-1 {
     top: 60px;
     left: 15px;
 }
-.services-heading-2{
+
+.services-heading-2 {
     top: 40px;
     /* left: 10px; */
 }
-.services-heading-3{
+
+.services-heading-3 {
     top: 40px;
     /* left: 20px; */
 }
-.services-heading-4{
+
+.services-heading-4 {
     top: 40px;
     /* left: 20px; */
 }
-.services-heading-5{
+
+.services-heading-5 {
     top: 45px;
     /* left: 20px; */
 }
-.services-heading-6{
+
+.services-heading-6 {
     top: 60px;
     left: 47px;
 }
@@ -302,7 +306,26 @@ p {
     font-family: var(--text-style-2);
     text-shadow: 0 0 10px #000;
 }
-
+.pop-up-1, .pop-up-2, .pop-up-3, .pop-up-4, .pop-up-5, .pop-up-6{
+    overflow-y: scroll;
+    position: absolute;
+    display: none;
+    padding: 5px;
+    border-radius: 10px;
+    width: inherit;
+    background-color: #fff;
+    font-family: var(--text-style-2);
+    color: #000;
+    z-index: 3;
+    height: 100%;
+}
+.pop-up-1 span, .pop-up-2 span, .pop-up-3 span, .pop-up-4 span, .pop-up-5 span, .pop-up-6 span{
+    display: block;
+    text-align: end;
+    padding: 0 20px;
+    width: 100%;
+    margin-bottom: 10px;
+}
 .service-layer h4 {
     display: inline-block;
     font-style: italic;
@@ -454,10 +477,12 @@ p {
     height: max-content;
     transition: .5s ease;
 }
+
 .about .about-container .profile .profile-layer p {
     font-size: 1.1vw;
-    margin-bottom: 8px;
+    margin-bottom: 8px;
 }
+
 .about .about-container .profile .profile-top-card {
     position: relative;
     z-index: 9;
@@ -771,13 +796,6 @@ footer a.top-icon {
     .about .about-container .profile .profile-layer p {
         font-size: 16px;
     }
-    /* .service-box:hover .service-layer{
-        transform: none;
-    }
-    .service-box .service-layer{
-        background: none;
-    } */
-
 }
 
 @media(max-width: 850px) {
@@ -833,6 +851,36 @@ footer a.top-icon {
 
     .home .content-box p {
         font-size: 1rem;
+    }
+
+    .service-box:hover .img img {
+        transform: none;
+    }
+
+    .service-box:hover .service-layer {
+        transform: translateY(0);
+    }
+
+    .service-box .service-layer {
+        bottom: -70px;
+        transform: none;
+        background: none;
+    }
+    .service-box .service-layer a{
+        font-size: 0.9rem;
+    }
+
+    .service-box:hover .img {
+        filter: none;
+    }
+
+    .service-box:hover .services-heading-1,
+    .service-box:hover .services-heading-2,
+    .service-box:hover .services-heading-3,
+    .service-box:hover .services-heading-4,
+    .service-box:hover .services-heading-5,
+    .service-box:hover .services-heading-6 {
+        visibility: visible;
     }
 }
 
