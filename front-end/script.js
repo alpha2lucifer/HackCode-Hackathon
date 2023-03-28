@@ -1,3 +1,13 @@
+for(let a=1; a<=6; a++){
+    document.querySelector(".click-here-" + a).addEventListener("click", function(){
+        document.querySelector(".pop-up-" + a).style.display="block";
+    });
+    document.querySelector(".pop-up-" + a + " span").addEventListener("click", function (){
+        document.querySelector(".pop-up-" + a).style.display="none";
+    });
+}
+
+
 let sections = document.querySelectorAll('section');
 let navlinks = document.querySelectorAll('header nav a');
 window.onscroll = () => {
@@ -82,5 +92,23 @@ function sendMail(){
         alert("Thanks for your feedback.\nYour feedback has been send successfully!");
     })
     .catch((err)=> console.log(err));
-    
 }
+
+// function f1(){
+//     alert("working");
+// }
+// function f2(){
+//     alert("working");
+// }
+// function f3(){
+//     alert("working");
+// }
+// function f4(){
+//     alert("working");
+// }
+// function f5(){
+//     alert("working");
+// }
+// function f6(){
+//     alert("working");
+// }
